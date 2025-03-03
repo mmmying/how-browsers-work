@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.20" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>浏览器工作原理</title><meta name="description" content="透过浏览器看懂前端本质">
+    <link rel="preload" href="/how-browsers-work/assets/style-Cmsfp_Jz.css" as="style"><link rel="stylesheet" href="/how-browsers-work/assets/style-Cmsfp_Jz.css">
+    <link rel="modulepreload" href="/how-browsers-work/assets/app-BSbw9KB2.js"><link rel="modulepreload" href="/how-browsers-work/assets/404.html-D4r6-iLg.js">
+    <link rel="prefetch" href="/how-browsers-work/assets/index.html-DwKXuOiR.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/01.html-CNJez8Xs.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/02.html-CaTH7a7S.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/03.html-CkmH89vg.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/04.html-Bm0hcf3E.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/05.html-CxChzPKU.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/06.html-K0i2x8ZP.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/07.html-Bvn5VLhf.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/08.html-DSbvR99F.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/09.html-_eoJ4CC_.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/10.html-DL_XgNgc.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/11.html-X9M1Eog2.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/12.html-_d6gR9mi.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/13.html-C9Q9K94b.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/14.html-uyOVwqN3.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/15.html-sp5tOSG3.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/16.html-UwP1t7H1.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/17.html-BQhnsgJD.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/18.html-DhSdXHsq.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/19.html-BBiWegnH.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/20.html-B9EJdIiz.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/21.html-BjlKlPKc.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/22.html-C9CIA6aJ.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/23.html-EM0Eb_CB.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/24.html-WxLFBmPd.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/25.html-ilXQgMBK.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/26.html-BYK5KVj6.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/27.html-CP3SXIN4.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/28.html-7NXJIGpi.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/29.html-D8ct6S3F.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/30.html-DPWFi_vr.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/31.html-CVXy7Kq_.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/32.html-Bj-8wFIg.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/33.html-BGsjjKyO.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/34.html-CXF2Ztez.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/35.html-CrWP6gyT.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/36.html--TPvfiao.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/01.html-BzZn_6ZN.js" as="script"><link rel="prefetch" href="/how-browsers-work/assets/setupDevtools-QXEOFQJV-B1jrycQA.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-ec9917b8><main class="page" data-v-ec9917b8><div vp-content data-v-ec9917b8><h1 data-v-ec9917b8>404</h1><blockquote data-v-ec9917b8>That&#39;s a Four-Oh-Four.</blockquote><a class="route-link" href="/how-browsers-work/" data-v-ec9917b8>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/how-browsers-work/assets/app-BSbw9KB2.js" defer></script>
+  </body>
+</html>
