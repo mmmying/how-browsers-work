@@ -3,14 +3,12 @@ import { defineUserConfig } from "vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
 
 export default defineUserConfig({
+  base: "/how-browsers-work/",
   lang: "zh-CN",
-
   title: "浏览器工作原理",
   description: "透过浏览器看懂前端本质",
-
   theme: defaultTheme({
     logo: "https://vuejs.press/images/hero.png",
-
     navbar: [
       { link: "/", text: "首页" },
       { link: "/guide/01", text: "全文阅读" },
