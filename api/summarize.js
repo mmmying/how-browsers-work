@@ -28,9 +28,9 @@ export default async (req, res) => {
       }
 
       // 解析请求体
-      console.log('req.body', req.body);
+      console.log('req.body: ', req.body);
       const { content } = req.body;
-      if (!content || content.length > 3000) {
+      if (!content || content.length > 30000) {
         setCorsHeaders();
         return res.status(400).json({ error: "无效内容" });
       }
@@ -52,7 +52,7 @@ export default async (req, res) => {
           ]
         })
       });
-
+      console.log("deepseek apiResponse: ", apiResponse)
       if (!apiResponse.ok) throw new Error("API 调用失败");
       const { choices } = await apiResponse.json();
       const summary = choices[0].message.content.replace(/\n/g, "<br>");
