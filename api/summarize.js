@@ -28,8 +28,8 @@ export default async (req, res) => {
       }
 
       // 解析请求体
-      const { content } = JSON.parse(req.body);
-      // console.log('req.body.content', content);
+      console.log('req.body', req.body);
+      const { content } = req.body;
       if (!content || content.length > 3000) {
         setCorsHeaders();
         return res.status(400).json({ error: "无效内容" });
