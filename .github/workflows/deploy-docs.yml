@@ -24,7 +24,7 @@ jobs:
       - name: 设置 pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10.5.2  # 和本地 pnpm 版本一致
 
       - name: 设置 Node.js
         uses: actions/setup-node@v3
