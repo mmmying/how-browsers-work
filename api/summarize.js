@@ -28,7 +28,6 @@ export default async (req, res) => {
       }
 
       // 解析请求体
-      console.log('req.body: ', req.body);
       const { content } = req.body;
       if (!content || content.length > 30000) {
         setCorsHeaders();

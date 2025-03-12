@@ -1,6 +1,8 @@
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+import path from "path";
 
 export default defineUserConfig({
   base: "/how-browsers-work/",
@@ -11,11 +13,11 @@ export default defineUserConfig({
     logo: "https://vuejs.press/images/hero.png",
     navbar: [
       { link: "/", text: "首页" },
-      { link: "/guide/01", text: "全文阅读" },
+      { link: "/guide/01", text: "全文阅读" }
       // { link: "/note/01", text: "重点笔记" }
     ],
     sidebar: {
-      '/guide':[
+      "/guide": [
         {
           text: "宏观视角下的浏览器 (6讲)",
           children: [
@@ -87,7 +89,7 @@ export default defineUserConfig({
             { text: "36 | HTTPS：让数据传输更安全", link: "/guide/36" }
           ]
         }
-      ],
+      ]
       // '/note':[{
       //   text: "",
       //   children: [
@@ -96,6 +98,12 @@ export default defineUserConfig({
       // }]
     }
   }),
-
-  bundler: viteBundler()
+  bundler: viteBundler(),
+  // 如果需要全局注册组件
+  plugins: [
+    registerComponentsPlugin({
+      // 配置项
+      componentsDir: path.resolve(__dirname, "./components")
+    })
+  ]
 });
