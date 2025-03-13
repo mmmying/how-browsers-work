@@ -1,7 +1,7 @@
 // api/summarize.js
 export default async (req, res) => {
   // --------------- CORS 配置 ---------------
-  const allowedOrigins = ["http://localhost:8080", "https://how-browsers-work.vercel.app"];
+  const allowedOrigins = ["http://localhost:8080", "https://mmmying.github.io"];
   const origin = req.headers.origin;
   const isOriginAllowed = allowedOrigins.includes(origin);
 
@@ -46,7 +46,7 @@ export default async (req, res) => {
           messages: [
             {
               role: "user",
-              content: `用中文分3点总结以下技术内容：\n\n${content.slice(0, 3000)}`
+              content: `用中文总结以下技术内容：\n\n${content.slice(0, 3000)}`
             }
           ]
         })
