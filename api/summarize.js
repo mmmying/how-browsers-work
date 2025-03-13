@@ -1,7 +1,7 @@
 // api/summarize.js
 export default async (req, res) => {
   // --------------- CORS 配置 ---------------
-  const allowedOrigins = ["http://localhost:8080", "https://your-domain.com"];
+  const allowedOrigins = ["http://localhost:8080", "https://how-browsers-work.vercel.app"];
   const origin = req.headers.origin;
   const isOriginAllowed = allowedOrigins.includes(origin);
 
