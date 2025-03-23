@@ -13,8 +13,9 @@ export default defineUserConfig({
     logo: "https://vuejs.press/images/hero.png",
     navbar: [
       { link: "/", text: "首页" },
-      { link: "/guide/01", text: "全文阅读" }
-      // { link: "/note/01", text: "重点笔记" }
+      { link: "/guide/01", text: "全文阅读" },
+      { link: "https://mmmying.github.io/typescript-tutorial/", text: "Typescript教程" },
+      { link: "https://mmmying.github.io/", text: "我的博客" }
     ],
     sidebar: {
       "/guide": [

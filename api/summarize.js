@@ -46,7 +46,7 @@ export default async (req, res) => {
           messages: [
             {
               role: "user",
-              content: `用中文总结以下技术内容：\n\n${content.slice(0, 3000)}`
+              content: `用中文总结以下技术内容：\n\n${content.slice(0, 30000)}`
             }
           ]
         })
